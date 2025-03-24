@@ -17,7 +17,6 @@ const response = await fetch(
 );
 const data = await response.json();
 if (data.cod !== 200) {
-    console.log(data); // Debug the error response from the API
     return res.status(404).json({ error: "City not found" });
 }
 res.json({
